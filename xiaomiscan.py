@@ -122,7 +122,7 @@ def parse_raw_data(raw_data):
 
 logging.basicConfig(filename='/tmp/xiaomiscan.log', format='%(asctime)s %(message)s')
 log = logging.getLogger()
-handler = RotatingFileHandler('/tmp/xiaomiscan.log', maxBytes=1024 * 1024, backupCount=0)
+handler = RotatingFileHandler('/tmp/xiaomiscan.log', maxBytes=1024 * 1024, backupCount=1)
 log.addHandler(handler)
 
 scanner = btle.Scanner()
